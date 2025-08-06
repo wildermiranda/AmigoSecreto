@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigo Secreto</title>
+    <style>
+        * {
+            font-family: "IBM Plex Sans", sans-serif;
+            font-size: 16px;
+        }
+
+        body {
+            padding: 20px;
+            background-color: #f4f4f4;
+            background-color: #9FE870;
+            background-image: url('background.png');
+        }
+        .container {
+            max-width: 30%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-family: "Bricolage Grotesque", sans-serif;
+            font-size: 50px;
+        }
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .input-group input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .input-group button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #163306;
+            color: #9FE870;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .input-group button:hover {
+            background-color: #0D1F00;
+        }
+        .list-container {
+            margin-bottom: 20px;
+        }
+        .list-container h3 {
+            font-size: 16px;
+            color: #0D1F00;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        #sortear-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            background-color: #9FE870;
+            color: #163306;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #sortear-btn:hover {
+            background-color: #80E142;
+        }
+        #resultado {
+            margin-top: 40px;
+            text-align: center;
+            font-family: "Bricolage Grotesque", sans-serif;
+            font-size: 40px;
+            color: #0D1F00;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Amigo Secreto</h1>
+
+        <div class="input-group">
+            <input type="text" id="nome-amigo" placeholder="Digite o nome do amigo" autocomplete="off">
+            <button onclick="adicionarAmigo()">Adicionar</button>
+        </div>
+
+        <div class="list-container">
+            <h3>Participantes:</h3>
+            <ul id="lista-amigos"></ul>
+        </div>
+
+        <button id="sortear-btn" onclick="sortearAmigo()">Sortear Amigo</button>
+
+        <p id="resultado"></p>
+    </div>
+
+    <script src="amigoSecreto.js"></script>
+</body>
+</html>
