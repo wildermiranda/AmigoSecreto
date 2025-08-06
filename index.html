@@ -14,14 +14,17 @@
         }
 
         body {
-            padding: 20px;
+            height: 90vh;
             background-color: #f4f4f4;
             background-color: #9FE870;
             background-image: url('background.png');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
         }
         .container {
-            max-width: 30%;
-            margin: auto;
+            width: 30%;
             background: white;
             padding: 20px;
             border-radius: 8px;
@@ -31,7 +34,7 @@
             text-align: center;
             color: #333;
             font-family: "Bricolage Grotesque", sans-serif;
-            font-size: 50px;
+            font-size: 40px;
         }
         .input-group {
             display: flex;
@@ -100,6 +103,17 @@
             font-size: 40px;
             color: #0D1F00;
             font-weight: bold;
+        }
+
+        @media (max-width: 1160px) {
+            .container {
+                width: 30%;
+            }
+
+            .input-group {
+                display: flex;
+                flex-direction: column;
+            }
         }
     </style>
 </head>
