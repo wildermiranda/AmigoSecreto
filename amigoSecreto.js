@@ -47,7 +47,9 @@ function sortearAmigo() {
     // Sorteia um índice aleatório
     const indiceSorteado = Math.floor(Math.random() * amigos.length);
     const amigoSorteado = amigos[indiceSorteado];
+    
+    resultadoElement.style.display = "block"
 
     // Exibe o resultado na tela
-    resultadoElement.textContent = `${amigoSorteado} 🎉`;
+    resultadoElement.textContent = amigoSorteado;
 }
